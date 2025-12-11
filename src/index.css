@@ -1,0 +1,161 @@
+body{
+  margin: 0;
+}
+.container {
+  display: flex;
+  gap: 20px;
+  padding: 15px;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+#products, #cart {
+  flex: 1;
+}
+
+.product-card {
+  width: 250px;
+  height: 320px;
+  border: 1px solid #ddd;
+  padding: 12px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+}
+
+button {
+  padding: 8px 12px;
+  border: none;
+  background: #007bff;
+  color: white;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #0068d6;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+#product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.product-card h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 5px 0;
+  height: 40px; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#cart {
+  max-width: 400px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 10px 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fafafa;
+  margin-bottom: 10px;
+}
+
+.cart-left {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.cart-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 5px;
+}
+
+.cart-price{
+  margin: 8px 0;
+}
+
+.cart-title{
+  margin: 0 0 8px 0;
+}
+
+.cart-title {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.qty-controls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.qty-controls button {
+  width: 26px;
+  height: 26px;
+  border: 1px solid #ccc;
+  background: #f2f2f2;
+  color: #333;
+  font-size: 18px;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: 0.2s;
+}
+
+.qty-controls button:hover {
+  background: #e5e5e5;
+}
+
+.qty-controls button:active {
+  background: #d9d9d9;
+  transform: scale(0.92);
+}
+
+.remove-btn{
+  background: #dc3545;
+  width: 50%;
+}
+
+.remove-btn:hover {
+  background: #c82333;
+} 
+
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+}
